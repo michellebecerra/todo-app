@@ -1,16 +1,18 @@
 # todo-app
-To run:
-On one terminal:
-> cd /todo-frontend
-> npm start
-On another terminal:
+# To run:
+On one terminal
+
+> cd /todo-frontend  
+> npm start  
+
+On another terminal  
 > cd /todo-backend
 > node index.js
 
-> make sure mongo is installed running:
+Make sure mongo is installed running:
 > mongod 
 
-> On browser:
+On browser:  
 http://localhost:3000/todos
 
 
