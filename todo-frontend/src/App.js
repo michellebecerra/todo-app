@@ -19,38 +19,18 @@ const List = (props) => {
     setTodos(await res.json());
   };
 
-  // const addTodo = async () => {
-  //   const res = await fetch('http://localhost:3001/todos', {
-  //     method: 'POST',
-  //     headers: {
-  //       'Content-Type': 'application/json'
-  //     },
-  //     body: JSON.stringify({ desc: text, done: false })
-  //   });
-
-  //   fetchTodos();
-  //   setText('');
-  // };
-
-
   useEffect(() => {
     fetchTodos();
   }, []);
 
   const items = todos.map(todo => <Item todo={todo} key={todo._id} fetchTodos={fetchTodos} />);
 
-  return (<div >
-{items}
-</div>);
-  
-  
+  return <div >{items}</div>; 
 };
 
 const Item = (props) => {
   const { done, desc, _id } = props.todo;
   return <div>{desc}</div>;
 };
-
-
 
 export default App;
